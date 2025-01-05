@@ -498,12 +498,13 @@ background-color: #276796;
     }
 
 .prev {
-    left: 0;
+    left: -20px;
     border-radius: 3px 0 0 3px;
+   
 }
 
 .next {
-    right: 0;
+    right: -20px;
     border-radius: 0 3px 3px 0;
 }
 button:hover {
@@ -518,79 +519,6 @@ button:hover {
     border-radius: 5px; /* Опционально: скругляем углы */
     background-color: #f9f9f9; /* Опционально: фоновый цвет */
 }
-
-@media (max-width: 768px) {
-    .flex {
-        gap: 5px;
-        padding: 10px 5px;
-        flex-wrap: wrap;
-    }
-    .image-slide{
-        max-width: 50%;
-    }
-    .title{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .sort{
-        flex-direction: row; /* Две колонки */
-        /* Увеличиваем пробелы между элементами */
-    }
-
-    .btn-image {
-        width: 100px;
-        height: 50px;
-    }
-
-    .btn-image-sort{
-        width: 30px;
-        height: 40px;
-        align-items: center;
-        
-        justify-content: start;
-        display: flex; /* Убедитесь, что это значение установлено */
-        flex-direction: column; /* Измените направление на столбец */
-    }
-
-    #map {
-        max-width: 95%;
-        left: 0%;
-    }
-
-    input,
-    .btn {
-        font-size: 1em;
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 768px) and (orientation: landscape){
-    #map {
-        max-width: 95%;
-        left: 0%;
-        height: 70%;
-
-    }
-    .image-slide{
-        max-width: 50%;
-    }
-    .title{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .flex {
-        gap: 15px;
-        padding: 20px;
-        flex-wrap: wrap;
-        max-width: 559px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
 .sort {
     display: flex;
     align-items: center;
@@ -719,3 +647,153 @@ select:hover{
     color: black;
 
 }
+
+
+@media (max-width: 1000px) {
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px; /* Увеличиваем расстояние между элементами */
+        padding: 15px 10px; /* Делаем отступы больше */
+    }
+
+    .image-slide {
+        max-width: 100%; /* Делаем изображения адаптивными */
+        margin: 0 auto; /* Центрируем */
+    }
+
+    .title {
+        text-align: center; /* Центрируем текст */
+        font-size: 1.2em; /* Увеличиваем шрифт для заголовков */
+        padding: 10px 0;
+    }
+
+    .sort {
+        flex-wrap: wrap;
+        gap: 10px; /* Добавляем расстояние между элементами */
+        align-items: center; /* Центрируем содержимое */
+    
+    }
+    .footer {
+        background-color: #012E4A;
+        border-radius: 15px;
+        height: 261px;
+        padding: 30px 15px; /* Уменьшаем отступы */
+    }
+    
+    .footer-info {
+        display: flex;
+        flex-direction: row; /* Элементы располагаются в столбец */
+        align-items: flex-start;
+        justify-content: space-between; 
+        flex-wrap: wrap;
+        color: #FFFFFF;
+        gap: 20px; /* Уменьшаем расстояние между элементами */
+    }
+    
+    .left, 
+    .center, 
+    .right {
+        margin: 0; /* Убираем боковые отступы */
+        max-width: 100%; /* Устанавливаем максимальную ширину */
+        text-align: center; /* Центрируем текст */
+    }
+    
+    .footer-paragraph {
+        font-size: 14px; /* Уменьшаем шрифт */
+    line-height: 24px; /* Уменьшаем высоту строки */
+    margin-bottom: 15px; /* Уменьшаем отступ снизу */
+    }
+    
+    .footer-paragraph-link {
+        margin-top: 5px; /* Уменьшаем отступ сверху */
+        font-size: 14px; /* Уменьшаем размер шрифта */
+        line-height: 24px;
+    }
+    
+    .footer-paragraph-address {
+        font-size: 14px; /* Уменьшаем размер шрифта */
+        line-height: 24px; /* Уменьшаем высоту строки */
+    }
+    
+    .footer-icons {
+        flex-direction: column; /* Выстраиваем иконки в строку */
+        justify-content: center; /* Центрируем иконки */
+        gap: 10px; /* Уменьшаем расстояние между иконками */
+    }
+    
+    .footer-icons li {
+        margin: 0;
+    }
+    
+    .right img {
+        width: 20px; /* Уменьшаем размер иконок */
+        height: 20px;
+    }
+    .btn-image {
+        width: 80px; /* Снижаем размер кнопок */
+        height: 40px;
+    }
+    .dropdown-content{
+        max-width: 100px;
+    }
+    .btn-image-sort {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #map {
+        width: 99%; /* Занимаем всю ширину экрана */
+        max-height: 400px; /* Ограничиваем высоту */
+        margin: 0 auto;
+        margin-bottom: 20px;
+        left: 0;
+    }
+
+    input,
+    .btn {
+        font-size: 1.2em; /* Увеличиваем шрифт для удобства ввода */
+        width: 100%; /* Растягиваем элементы */
+        padding: 10px;
+    }
+
+    input {
+        margin-bottom: 10px; /* Добавляем отступы между полями */
+    }
+
+    .btn {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+
+@media (max-width: 768px) and (orientation: landscape){
+    #map {
+        max-width: 95%;
+        left: 0%;
+        height: 70%;
+
+    }
+    .image-slide{
+        max-width: 50%;
+    }
+    .title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .flex {
+        gap: 15px;
+        padding: 20px;
+        flex-wrap: wrap;
+        max-width: 559px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
